@@ -1,5 +1,5 @@
-## Wrap-x
-vercel hosted site: https://openai-wrapx.vercel.app
+## ChatGPT-Wrapper
+vercel hosted site: https://chatgpt-wrapper.vercel.app
 
 ![mobile-web](https://i.imgur.com/NaVXqlel.png)
 ![desktop-web](https://i.imgur.com/VDIEyAxh.png)
@@ -8,7 +8,7 @@ vercel hosted site: https://openai-wrapx.vercel.app
 # db
     - firebase - firestore
 # frontend
-    - angular
+    - react
 ```
 
 #### Setup locally
@@ -31,6 +31,6 @@ vercel hosted site: https://openai-wrapx.vercel.app
     - clone repo
     - do -> npm i 
     - change your configs of openai and firebase in 
-        - environment.prod.ts
-        - environment.ts
-    - run locally -> ng s --o
+        - environment
+    - run locally -> npm start
+```
