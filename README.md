@@ -1,5 +1,5 @@
 ## ChatGPT-Wrapper
-vercel hosted site: https://chatgpt-wrapper.vercel.app
+vercel hosted site: [chatgpt-wrapper.vercel.app](https://chatgpt-wrap.vercel.app/)
 
 ![mobile-web](https://i.imgur.com/NaVXqlel.png)
 ![desktop-web](https://i.imgur.com/VDIEyAxh.png)
