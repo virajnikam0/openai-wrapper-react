@@ -1,11 +1,15 @@
 import './App.css';
+import SearchMain from "./features/SearchMain";
+import { openAIConfig, ERROR_DATA_NOT_FOUND } from "./utils/app-constants";
 
-function App() {
+const App = () => {
+  console.log(openAIConfig);
+  console.log(ERROR_DATA_NOT_FOUND);
   return (
-    <div className="App">
-      <h2>Hello World</h2>
-    </div>
-  );
+		<>
+			<SearchMain />
+		</>
+	);
 }
 
 export default App;
