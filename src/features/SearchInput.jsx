@@ -17,7 +17,6 @@ const SearchInput = (props) => {
   useEffect(() => {
     async function fetchData() {
       setModuleConfigs(await getAllModules());
-      // console.log(moduleConfigs + "    " + "this is module config");
     } 
     fetchData();
   }, []);
@@ -37,6 +36,7 @@ const SearchInput = (props) => {
   }
   const onChangeFeatureSelectHandler = (e) => {
     setFeatureText(e.target.value);
+    
   }
   const onChangeSearchTextHandler = (e) => {
     setSearchText(e.target.value);
@@ -46,10 +46,9 @@ const SearchInput = (props) => {
     e.preventDefault();
     const searchInput = {
       moduleName: moduleText,
-      featureName: featureText,
+      featureName: featureText?.split('-')[1] ?? '',
       searchText: searchText,
     };
-    console.log(searchInput);
     const result = await getSearchOutput(searchInput);
     if (result.isResultOk){
       props.bridgeOutputHandler(result.resultText);
@@ -112,7 +111,7 @@ const SearchInput = (props) => {
             <option value="default">Select option</option>
             {
               filteredFeatureByModule.map((item, index) => (
-                <option key={index} value={index}>
+                <option key={index} value={`${index}-${item}`}>
                   {item}
                 </option>
             ))}
